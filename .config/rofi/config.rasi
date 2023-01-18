@@ -1,0 +1,9 @@
+configuration {
+ modi: "window,drun,ssh,combi";
+ font: "hack 10";
+ combi-modi: "window,drun,ssh";
+ dpi: 192;
+}
+
+//@theme "/home/taein/.config/rofi/themes/rounded-orange-dark.rasi"
+@theme "/home/taein/.config/rofi/themes/rounded-pink-dark.rasi"
