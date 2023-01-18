@@ -1,0 +1,14 @@
+# WALLPAPER
+nitrogen --restore &
+
+# COMPOSITOR
+picom -f &
+
+# IBOUS DAEMON
+ibus-daemon -drx
+
+# EXPORT
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+
