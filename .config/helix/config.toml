@@ -1,0 +1,127 @@
+theme                    = "dracula"
+
+[editor]
+# Number of lines of padding around the edge of 
+# the screen when scrolling.
+scrolloff                = 5
+# Enable mouse mode.
+mouse                    = false
+# Middle click paste support.
+middle-click-paste       = false
+# Number of lines to scroll per scroll wheel step
+scroll-lines             = 3
+# Shell to use when running external commands.
+shell                    = ["fish", "-c"]
+# Line number display
+line-number              = "relative"
+# Highlight all lines with a cursor. 
+cursorline               = true
+# Highlight all columns with a cursor.
+cursorcolumn             = true
+# Enable automatic pop up of auto-completion
+auto-completion          = true
+# Enable automatic formatting on save
+auto-format              = true
+# Enable automatic saving onf focus moving
+# away from Heix (Require foucs event support terminal).
+auto-save                = true
+# Time in millseconds since last keypress before
+# idle timers trigger. used for autocompletion, set to 0
+# for instant.
+idle-timeout             = 400
+# The min-length of word under cursor to trigger
+# autocompletion
+completion-trigger-len   = 2
+# wheter to display infoboxes
+auto-info                = true
+# Set to true to override automatic detection of
+# terminal truecolor support in the event of a false
+# negative 
+true-color               = false
+# Renders a line at the top of the editor displaying
+# open buffers. Can be `always` `never` or `multiple`
+bufferline               = "never"
+# Whether to color the mode indicator with different
+# colors depending on the mode itself
+color-modes              = false
+# auto-pairs altogether
+auto-pairs               = true
+
+[editor.statusline]
+# Allows configuring the statusline at the bottom of the editor
+left                     = ["mode", "spinner", "file-name",
+                            "position", "position-percentage"]
+center                   = []
+right                    = ["diagnostics", "selections", "file-type"]
+separator                = "|"
+mode.normal              = "N"
+mode.insert              = "I"
+mode.select              = "S"
+
+[editor.lsp]
+# Display LSP progress messages below statusline 
+display-messages         = true
+# Enable automatic popup of siganture help
+auto-signature-help      = true
+# Display docs under signature help popup
+display-signature-help-docs = true
+
+[editor.cursor-shape] 
+# Defnes the shape of cursor in each mode
+insert                    = "bar"
+normal                    = "block"
+select                    = "underline"
+
+[editor.file-picker]
+# Enables ignoring hidden files
+hidden                   = true
+# Enables reading ignore files from parent directories
+parents                  = true
+# Enables reading .ignore files
+ignore                   = true
+# Enables reading .gitignore files
+git-ignore               = true
+# Enables reading global .gitignore files 
+git-global               = true
+# Enables reading .git/info/execlude files
+git-exclude              = true
+# Set with an integer value for maximum depth to recruse.
+# max-depth                = 0
+
+[editor.search]
+# Enable smart case regex searching
+smart-case               = true
+# Whether the search should wrap after depleting the matches
+wrap-around              = true
+
+[editor.whitespace.render]
+# Options for rendering whitespace visible characters
+# Use `:set whitespace.render all` to temporarily enable
+space                    = "none"
+tab                      = "none"
+newline                  = "none"
+
+[editor.whitespace.characters]
+space                    = "·"
+nbsp                     = "⍽"
+tab                      = "→"
+newline                  = "⏎"
+tabpad                   = "·"
+
+[editor.indent-guides]
+# Options for rendering vertical indent guides.
+# Whether to render indent guides.
+render                   = false
+# Literal character to use for rendering the indent guide
+character                = "|"
+# Number of indent levels to skip
+skip-level               = 1
+
+[keys.normal]
+C-o                      = ":open ~/.config/helix/config.toml"
+C-g                      = "goto_last_line"
+"ret"                    = ["open_below", "normal_mode"]
+
+[keys.insert]
+"C-g"                    = "normal_mode"
+
