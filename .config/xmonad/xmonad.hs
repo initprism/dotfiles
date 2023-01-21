@@ -97,6 +97,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
   , ((modm,               xK_p       ), spawn myLauncher)
   , ((modm,               xK_f       ), spawn myBrowser)
+  -- Added because I was bored
+  , ((modm .|. shiftMask, xK_f       ), spawn $ myBrowser <> " https://github.com/initprism")
   , ((modm,               xK_u       ), spawn myFileManager)
   , ((modm,               xK_d       ), spawn myToggleTouchPad)
   , ((modm,               xK_space   ), sendMessage NextLayout)
