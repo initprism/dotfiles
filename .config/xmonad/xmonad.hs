@@ -64,6 +64,9 @@ myLocker = "light-locker-command -l"
 myFileManager :: String
 myFileManager = "nautilus"
 
+myToggleTouchPad :: String
+myToggleTouchPad = "$HOME/.local/bin/toggle-touchpad"
+
 ------------------------------------------------------------------------
 -- WorkSpace
 
@@ -80,7 +83,7 @@ myNormalBorderColor :: String
 myNormalBorderColor = colorBack
  
 myFocusedBorderColor :: String
-myFocusedBorderColor = color14
+myFocusedBorderColor = color10
 
 myClickJustFocuses :: Bool
 myClickJustFocuses = False
@@ -95,6 +98,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , ((modm,               xK_p       ), spawn myLauncher)
   , ((modm,               xK_f       ), spawn myBrowser)
   , ((modm,               xK_u       ), spawn myFileManager)
+  , ((modm,               xK_d       ), spawn myToggleTouchPad)
   , ((modm,               xK_space   ), sendMessage NextLayout)
   , ((modm,               xK_n       ), refresh)
   , ((modm,               xK_j       ), windows W.focusDown)
